@@ -68,16 +68,16 @@ You can install Postman via this website: https://www.postman.com/downloads/
     -   [X] Commit: `Implement list_all_as_string function in Notification repository.`
     -   [X] Write answers of your learning module's "Reflection Subscriber-1" questions in this README.
 -   **STAGE 3: Implement services and controllers**
-    -   [ ] Commit: `Create Notification service struct skeleton.`
-    -   [ ] Commit: `Implement subscribe function in Notification service.`
-    -   [ ] Commit: `Implement subscribe function in Notification controller.`
-    -   [ ] Commit: `Implement unsubscribe function in Notification service.`
-    -   [ ] Commit: `Implement unsubscribe function in Notification controller.`
-    -   [ ] Commit: `Implement receive_notification function in Notification service.`
-    -   [ ] Commit: `Implement receive function in Notification controller.`
-    -   [ ] Commit: `Implement list_messages function in Notification service.`
-    -   [ ] Commit: `Implement list function in Notification controller.`
-    -   [ ] Write answers of your learning module's "Reflection Subscriber-2" questions in this README.
+    -   [X] Commit: `Create Notification service struct skeleton.`
+    -   [X] Commit: `Implement subscribe function in Notification service.`
+    -   [X] Commit: `Implement subscribe function in Notification controller.`
+    -   [X] Commit: `Implement unsubscribe function in Notification service.`
+    -   [X] Commit: `Implement unsubscribe function in Notification controller.`
+    -   [X] Commit: `Implement receive_notification function in Notification service.`
+    -   [X] Commit: `Implement receive function in Notification controller.`
+    -   [X] Commit: `Implement list_messages function in Notification service.`
+    -   [X] Commit: `Implement list function in Notification controller.`
+    -   [X] Write answers of your learning module's "Reflection Subscriber-2" questions in this README.
 
 ## Your Reflections
 This is the place for you to write reflections:
@@ -89,3 +89,17 @@ This is the place for you to write reflections:
 
 2. Rust tidak mengizinkan kita untuk memodifikasi konten variabel static secara langsung seperti di Java karena Rust mengutamakan keamanan memori dan thread safety. Di Java, meskipun kita bisa mengubah nilai variabel static melalui fungsi static, hal ini berisiko menimbulkan masalah seperti race condition ketika banyak thread mengakses variabel tersebut secara bersamaan. Sementara itu, Rust memaksa penggunaan mekanisme seperti lazy_static untuk inisialisasi variabel static secara aman, serta tipe seperti RwLock<> atau Mutex<> untuk memastikan bahwa akses ke data tersebut aman dalam konteks multithreading. 
 #### Reflection Subscriber-2
+1. Saya belum mengeksplorasi bagian lain di luar langkah-langkah tutorial, seperti src/lib.rs, karena saya belum belajar Rust lebih dalam. Fokus saya saat ini adalah memahami konsep dasar rust dan penerapannya dalam tutorial. Kedepannya saya berencana untuk memperdalam pemahaman tentang Rust dan mulai mengeksplorasi bagian lain dari kode yang lebih kompleks, seperti src/lib.rs, untuk melihat bagaimana semuanya terhubung dalam keseluruhan aplikasi.
+
+2. Observer pattern sangat memudahkan dalam menambahkan lebih banyak subscriber. Dengan Observer, ketika ada penambahan subscriber baru, subscriber tersebut akan langsung terdaftar dan mulai menerima notifikasi tanpa perlu mengubah logika yang ada. Hal ini memungkinkan penambahan subscriber baru menjadi sangat mudah. Jika kita menambahkan lebih dari satu instance dari aplikasi Main, sistem tetap fleksibel karena setiap instance hanya perlu mendaftar sebagai subscriber pada sistem, dan sistem notifikasi akan mengurus distribusi pesan ke semua instance yang terdaftar.
+
+3. Saya belum mencoba membuat test sendiri. Saya hanya melakukan pengujian menggunakan Postman collection yang ada di tutorial. Membuat test sendiri sangat berguna karena memungkinkan kita untuk menguji fungsionalitas aplikasi secara lebih mendalam dan spesifik. Membuat test sendiri juga memberikan kita kontrol lebih besar terhadap skenario yang ingin kita uji.  Penambahan dokumentasi yang lebih rinci tentang setiap endpoint dan contoh request/response bisa membantu anggota kelompok di group project dalam menguji API dan membantu pemahaman cara kerja API. 
+
+
+
+
+
+
+
+
+
